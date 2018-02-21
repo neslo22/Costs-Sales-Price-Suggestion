@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import sample.validateFields.NumberTextField?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <top>
+        <TitledPane fx:id="titledPane" style="-fx-background-color: #424242;" text="I want to..." BorderPane.alignment="CENTER">
+            <content>
+                <AnchorPane maxHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="200.0" style="-fx-background-color: #424242;">
+                    <children>
+                        <HBox prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <VBox prefWidth="290.0">
+                                    <children>
+                              <Label alignment="CENTER" prefHeight="21.0" prefWidth="108.0" text="Increment By" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="Open Sans SemiBold" size="15.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="75.0" />
+                                 </VBox.margin>
+                              </Label>
+                                        <NumberTextField fx:id="incrementCost_Text" alignment="CENTER" prefHeight="31.0" prefWidth="155.0" promptText="Increments" text="100">
+                                            <font>
+                                                <Font name="Open Sans SemiBold" size="15.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets left="60.0" right="85.0" top="5.0" />
+                                            </VBox.margin>
+                                        </NumberTextField>
+                                        <RadioButton fx:id="cost_Radio" contentDisplay="CENTER" mnemonicParsing="false" onAction="#predictCost" prefHeight="22.0" prefWidth="117.0" text="Predict Cost" textFill="WHITE">
+                                            <toggleGroup>
+                                                <ToggleGroup fx:id="a" />
+                                            </toggleGroup>
+                                            <font>
+                                                <Font name="Open Sans SemiBold" size="15.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets left="70.0" top="10.0" />
+                                            </VBox.margin>
+                                        </RadioButton>
+                                    </children>
+                                </VBox>
+                                <VBox prefWidth="300.0">
+                                    <children>
+                              <Label alignment="CENTER" prefHeight="21.0" prefWidth="108.0" text="Increment By" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="Open Sans SemiBold" size="15.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="90.0" />
+                                 </VBox.margin>
+                              </Label>
+                                        <NumberTextField fx:id="incrementPrice_Text" alignment="CENTER" prefHeight="31.0" prefWidth="155.0" promptText="Increments" text="5">
+                                            <font>
+                                                <Font name="Open Sans SemiBold" size="15.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets left="75.0" right="75.0" top="5.0" />
+                                            </VBox.margin>
+                                        </NumberTextField>
+                                        <RadioButton fx:id="price_Radio" contentDisplay="CENTER" mnemonicParsing="false" onAction="#predictPrice" prefHeight="22.0" prefWidth="125.0" text="Predict Price" textFill="WHITE" toggleGroup="$a">
+                                            <font>
+                                                <Font name="Open Sans SemiBold" size="15.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets left="85.0" top="10.0" />
+                                            </VBox.margin>
+                                        </RadioButton>
+                                    </children>
+                                </VBox>
+                                <VBox prefWidth="290.0">
+                                    <children>
+                              <Label alignment="CENTER" prefHeight="21.0" prefWidth="108.0" text="Increment By" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="Open Sans SemiBold" size="15.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="98.0" />
+                                 </VBox.margin>
+                              </Label>
+                                        <NumberTextField fx:id="incrementIncome_Text" alignment="CENTER" prefHeight="31.0" prefWidth="155.0" promptText="Increments" text="100">
+                                            <font>
+                                                <Font name="Open Sans SemiBold" size="15.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets left="85.0" right="60.0" top="5.0" />
+                                            </VBox.margin>
+                                        </NumberTextField>
+                                        <RadioButton fx:id="income_Radio" contentDisplay="CENTER" mnemonicParsing="false" onAction="#predictIncome" prefHeight="22.0" prefWidth="137.0" selected="true" text="Predict Income" textFill="WHITE" toggleGroup="$a">
+                                            <font>
+                                                <Font name="Open Sans SemiBold" size="15.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets left="85.0" top="10.0" />
+                                            </VBox.margin>
+                                        </RadioButton>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+                    </children>
+                </AnchorPane>
+            </content>
+            <font>
+                <Font name="Open Sans SemiBold" size="24.0" />
+            </font>
+        </TitledPane>
+    </top>
+    <left>
+        <AnchorPane fx:id="cost_Anchor" minWidth="-Infinity" prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: #F44336;" BorderPane.alignment="CENTER">
+            <children>
+                <VBox alignment="CENTER" prefWidth="300.0" AnchorPane.bottomAnchor="-0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="300.0" text="Cost" textFill="WHITE">
+                            <font>
+                                <Font name="Open Sans SemiBold" size="34.0" />
+                            </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                        </Label>
+                        <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                            <VBox.margin>
+                                <Insets bottom="30.0" top="5.0" />
+                            </VBox.margin>
+                     <image>
+                        <Image url="@Images/cost.png" />
+                     </image>
+                        </ImageView>
+                        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="300.0">
+                            <children>
+                                <Button fx:id="decreaseCost_Button" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#decreaseCost" prefHeight="40.0" prefWidth="40.0" text="&lt;">
+                                    <font>
+                                        <Font name="Open Sans SemiBold" size="17.0" />
+                                    </font>
+                                </Button>
+                                <NumberTextField fx:id="cost_Text" alignment="CENTER" onKeyReleased="#executePrediction" onKeyTyped="#executePrediction" prefHeight="40.0" prefWidth="150.0" text="100">
+                                    <font>
+                                        <Font name="Open Sans SemiBold" size="18.0" />
+                                    </font>
+                                </NumberTextField>
+                                <Button fx:id="increaseCost_Button" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#increaseCost" prefHeight="40.0" prefWidth="40.0" text="&gt;">
+                                    <font>
+                                        <Font name="Open Sans SemiBold" size="17.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+    </left>
+    <center>
+        <AnchorPane fx:id="price_Anchor" minWidth="-Infinity" prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: #8BC34A;" BorderPane.alignment="CENTER">
+            <children>
+                <VBox alignment="CENTER" prefWidth="300.0" AnchorPane.bottomAnchor="-0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="300.0" text="Price" textFill="WHITE">
+                            <font>
+                                <Font name="Open Sans SemiBold" size="34.0" />
+                            </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                        </Label>
+                        <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                            <VBox.margin>
+                                <Insets bottom="30.0" top="5.0" />
+                            </VBox.margin>
+                     <image>
+                        <Image url="@Images/price.png" />
+                     </image>
+                        </ImageView>
+                        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="300.0">
+                            <children>
+                                <Button fx:id="decreasePrice_Button" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#decreasePrice" prefHeight="40.0" prefWidth="40.0" text="&lt;">
+                                    <font>
+                                        <Font name="Open Sans SemiBold" size="17.0" />
+                                    </font>
+                                </Button>
+                                <NumberTextField fx:id="price_Text" alignment="CENTER" onKeyReleased="#executePrediction" onKeyTyped="#executePrediction" prefHeight="40.0" prefWidth="150.0" text="20">
+                                    <font>
+                                        <Font name="Open Sans SemiBold" size="18.0" />
+                                    </font>
+                                </NumberTextField>
+                                <Button fx:id="increasePrice_Button" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#increasePrice" prefHeight="40.0" prefWidth="40.0" text="&gt;">
+                                    <font>
+                                        <Font name="Open Sans SemiBold" size="17.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+    </center>
+    <bottom>
+        <AnchorPane prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #424242;" BorderPane.alignment="CENTER" />
+    </bottom>
+    <right>
+        <AnchorPane fx:id="income_Anchor" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #00BCD4;" BorderPane.alignment="CENTER">
+            <children>
+                <VBox alignment="CENTER" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <Label alignment="CENTER" prefHeight="28.0" prefWidth="300.0" text="Income" textFill="WHITE">
+                            <font>
+                                <Font name="Open Sans SemiBold" size="34.0" />
+                            </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                        </Label>
+                        <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                            <VBox.margin>
+                                <Insets bottom="30.0" top="5.0" />
+                            </VBox.margin>
+                     <image>
+                        <Image url="@Images/income.png" />
+                     </image>
+                        </ImageView>
+                        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="300.0">
+                            <children>
+                                <Button fx:id="decreaseIncome_Button" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#decreaseIncome" prefHeight="40.0" prefWidth="40.0" text="&lt;">
+                                    <font>
+                                        <Font name="Open Sans SemiBold" size="17.0" />
+                                    </font>
+                                </Button>
+                                <NumberTextField fx:id="income_Text" alignment="CENTER" onKeyPressed="#executePrediction" onKeyReleased="#executePrediction" onKeyTyped="#executePrediction" prefHeight="40.0" prefWidth="150.0" text="20">
+                                    <font>
+                                        <Font name="Open Sans SemiBold" size="18.0" />
+                                    </font>
+                                </NumberTextField>
+                                <Button fx:id="increaseIncome_Button" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#increaseIncome" prefHeight="40.0" prefWidth="40.0" text="&gt;">
+                                    <font>
+                                        <Font name="Open Sans SemiBold" size="17.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+    </right>
+</BorderPane>
