@@ -17,7 +17,7 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
     <top>
-        <TitledPane fx:id="titledPane" style="-fx-background-color: #424242;" text="I want to..." BorderPane.alignment="CENTER">
+        <TitledPane fx:id="titledPane" expanded="false" style="-fx-background-color: #424242;" text="Tool Box" textFill="WHITE" BorderPane.alignment="CENTER">
             <content>
                 <AnchorPane maxHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="200.0" style="-fx-background-color: #424242;">
                     <children>

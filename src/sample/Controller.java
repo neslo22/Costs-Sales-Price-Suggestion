@@ -4,18 +4,20 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
-
-import javax.xml.soap.Text;
+import javafx.fxml.Initializable;
+import java.net.URL;
 import java.text.DecimalFormat;
-import java.text.ParseException;
+import java.util.ResourceBundle;
 
-public class Controller {
+public class Controller implements Initializable{
 
     @FXML TextField incrementCost_Text, incrementPrice_Text, incrementIncome_Text, cost_Text, price_Text, income_Text;
     @FXML Button decreaseCost_Button, increaseCost_Button, decreasePrice_Button, increasePrice_Button, decreaseIncome_Button, increaseIncome_Button;
     @FXML RadioButton cost_Radio, price_Radio, income_Radio;
     Predictions predict = new Predictions();
     private DecimalFormat df2 = new DecimalFormat("###.##");
+
+
 
     @FXML private void decreaseCost(){
         cost_Text.setText(increaseDecrease(cost_Text,incrementCost_Text,false));
@@ -87,7 +89,9 @@ public class Controller {
             return String.valueOf(Double.valueOf(df2.format(Double.parseDouble(x.getText()) - Double.parseDouble(y.getText()))));
         }
     }
-
-
-
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        price_Radio.setSelected(true);
+        predictPrice();
+    }
 }

@@ -1,0 +1,45 @@
+.root{
+    -fx-text-fill: white;
+}
+.button{
+    -fx-background-color: white;
+    -fx-background-radius: 0;
+    -fx-text-fill: black;
+}
+.button:hover {
+    -fx-border-color: #F5F5F5;
+    -fx-background-color: #F5F5F5;
+}
+.button:pressed {
+    -fx-background-color: #EEEEEE;
+}
+.text-box{
+    -fx-background-radius: 0;
+}
+.text-field:focused, .text-area:focused {
+    -fx-border-color: #F5F5F5;
+    -fx-background-color: #F5F5F5;
+}
+.text-field, .text-area {
+    -fx-border-color: white;
+    -fx-background-color: white;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+    -fx-effect: innershadow(gaussian, transparent, 0, 0, 0, 0);
+}
+.titled-pane > .title {
+	-fx-background-color: #424242;
+	-fx-border-color: #424242;
+	-fx-text-fill: #FAFAFA;
+}
+.titled-pane > .content {
+	-fx-background-color: #424242;
+	-fx-border-color: #424242;
+}
+ .radio-button > .radio{
+	-fx-background-color : white;
+ }
+.titled-pane > .title > .arrow-button .arrow{
+    -fx-background-color : white;
+    -fx-focus-color: transparent;
+}
